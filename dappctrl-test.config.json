@@ -1,0 +1,193 @@
+{
+    "AgentServer": {
+        "Addr": "localhost:3000",
+        "TLS": null,
+        "EthCallTimeout": 5
+    },
+
+    "AgentServerTest": {
+        "ServerStartupDelay": 10
+    },
+
+    "ClientBilling": {
+        "CollectPeriod":  1
+    },
+
+    "ClientBillingTest": {
+        "MonitorStartupDelay": 10,
+        "ReactionDelay": 100
+    },
+
+    "BillingTest": {
+        "Channel": {
+            "BigDeposit":1000,
+            "MidDeposit":100,
+            "SmallDeposit":1
+        },
+        "Offer": {
+            "BigLag": 10000,
+            "MaxInactiveTimeSec": 10,
+            "MaxUnit": 900,
+            "SmallLag": 1,
+            "UnitPrice": 1
+        },
+        "Session": {
+            "SecondsConsumed": 300,
+            "UnitsUsed": 300
+        }
+    },
+
+    "BlockMonitor": {
+        "CollectPause": 6,
+        "SchedulePause": 6,
+        "Timeout": 5
+    },
+
+    "DB": {
+        "Conn": {
+            "dbname": "dappctrl",
+            "sslmode": "disable",
+            "user": "postgres",
+            "host": "localhost",
+            "port": "5432"
+        }
+    },
+
+    "EptTest": {
+        "Ca": "crt.valid",
+        "ConfInvalid": "conf.invalid",
+        "ConfValidCaEmpty": "conf.valid.ca.empty",
+        "ConfValidCaInvalid": "conf.valid.ca.invalid",
+        "ConfValidCaNotExist": "conf.valid.ca.notexist",
+        "ConfValidCaValid": "conf.valid.ca.valid",
+        "ExportConfigKeys": [ "proto", "cipher", "ping-restart", "ping",
+            "connect-retry", "ca", "comp-lzo", "keepalive" ],
+        "RetrySec": [ 0, 1, 2 ],
+        "SessSrvStartTimeout": [0, 1, 2 ],
+        "ServerConfig": {"A": "A", "B" :"B", "C": "C"},
+        "ValidHost": ["privatix.io:443", "127.0.0.1:443"],
+        "VPNConfig": {
+            "Login": "!login!",
+            "Pass": "test-pass"
+        }
+    },
+
+    "Eth": {
+        "Contract" : {
+            "PTCAddrHex": "",
+            "PSCAddrHex": ""
+        },
+        "GethURL": "http://localhost:8545",
+        "TruffleAPIURL": ""
+    },
+
+    "Gas": {
+        "PTC": {
+            "Approve": 45375
+        },
+        "PSC": {
+            "AddBalanceERC20": 49412,
+            "RegisterServiceOffering": 95625,
+            "CreateChannel": 76797,
+            "CooperativeClose": 97566,
+            "ReturnBalanceERC20": 43417,
+            "SetNetworkFee": 27400,
+            "UncooperativeClose": 56612,
+            "Settle": 41828,
+            "TopUp": 42065,
+            "GetChannelInfo": 29066,
+            "PublishServiceOfferingEndpoint": 30528,
+            "GetKey": 27310,
+            "BalanceOf": 23655,
+            "PopupServiceOffering": 32674,
+            "RemoveServiceOffering": 39238
+        }
+    },
+
+    "JobHanlderTest": {
+        "SOMCTimeout": 10
+    },
+
+    "Job": {
+        "CollectJobs": 100,
+        "CollectPeriod": 1,
+        "WorkerBufLen": 10,
+        "Workers": 0,
+        "TryLimit": 3,
+        "TryPeriod": 1,
+        "Types": {
+            "clientPreChannelCreate": {
+                "TryLimit": 3,
+                "TryPeriod": 1
+            },
+            "preAccountAddBalanceApprove": {
+                "Duplicated": true
+            },
+            "preAccountAddBalance": {
+                "Duplicated": true
+            },
+            "afterAccountAddBalance": {
+                "Duplicated": true
+            },
+            "preAccountReturnBalance": {
+                "Duplicated": true
+            },
+            "afterAccountReturnBalance": {
+                "Duplicated": true
+            },
+            "addCheckBalance": {
+                "Duplicated": true
+            }
+        }
+    },
+
+    "JobTest": {
+        "StressJobs": 100
+    },
+
+    "Log": {
+        "Level": "info"
+    },
+
+    "PayServer": {
+        "Addr": "localhost:9000",
+        "TLS": null
+    },
+
+    "SessionServer": {
+        "Addr": "localhost:8000",
+        "TLS": null
+    },
+
+    "SessionServerTest": {
+        "ServerStartupDelay": 10,
+        "Product": {
+            "ValidFormatConfig": {"A": "A", "B" :"B", "C": "C"}
+        }
+
+    },
+
+    "SOMC": {
+        "ReconnPeriod": 1,
+        "URL": "ws://localhost:8080"
+    },
+
+    "SOMCTest": {
+        "ServerStartupDelay": 10
+    },
+
+    "VPNConfigPusher": {
+        "ExportConfigKeys": [ "proto", "cipher", "ping-restart", "ping",
+            "connect-retry", "ca", "comp-lzo", "keepalive" ],
+        "TimeOut": 120
+    },
+
+    "VPNMonitor": {
+        "Addr": "localhost:7505",
+        "ByteCountPeriod": 5
+    },
+
+    "VPNMonitorTest": {
+        "ServerStartupDelay": 10
+    }
+}
